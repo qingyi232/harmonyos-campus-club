@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "校园社团管理系统模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "校园社团管理系统"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "校园社团管理"
+    },
+    {
+      "name": "permission_internet_reason",
+      "value": "加载社团封面、活动配图与头像等网络图片"
+    }
+  ]
+}

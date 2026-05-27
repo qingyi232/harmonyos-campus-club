@@ -1,0 +1,10 @@
+{
+  "license": "",
+  "devDependencies": {},
+  "author": "",
+  "name": "entry",
+  "description": "校园社团管理系统 - 主模块",
+  "main": "",
+  "version": "1.0.0",
+  "dependencies": {}
+}

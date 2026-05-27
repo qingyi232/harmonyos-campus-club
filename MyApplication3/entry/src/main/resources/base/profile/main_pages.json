@@ -1,0 +1,22 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/LoginPage",
+    "pages/RegisterPage",
+    "pages/HomePage",
+    "pages/ClubListPage",
+    "pages/ClubDetailPage",
+    "pages/ClubApplyPage",
+    "pages/ActivityListPage",
+    "pages/ActivityDetailPage",
+    "pages/ActivityApplyPage",
+    "pages/MemberManagePage",
+    "pages/FinanceManagePage",
+    "pages/ProfilePage",
+    "pages/StatisticsPage",
+    "pages/MyClubPage",
+    "pages/MyActivityPage",
+    "pages/AuditClubPage",
+    "pages/AuditActivityPage"
+  ]
+}

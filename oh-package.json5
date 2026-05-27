@@ -1,0 +1,8 @@
+{
+  "modelVersion": "5.0.0",
+  "description": "基于鸿蒙端云协同的校园社团管理系统",
+  "dependencies": {},
+  "devDependencies": {
+    "@ohos/hypium": "1.0.6"
+  }
+}

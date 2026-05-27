@@ -1,0 +1,188 @@
+{
+  "objectTypes": [
+    {
+      "objectTypeName": "UserInfo",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "username", "fieldType": "String", "isNullable": false},
+        {"fieldName": "password", "fieldType": "String", "isNullable": false},
+        {"fieldName": "realName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "studentId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "phone", "fieldType": "String", "isNullable": true},
+        {"fieldName": "email", "fieldType": "String", "isNullable": true},
+        {"fieldName": "avatar", "fieldType": "String", "isNullable": true},
+        {"fieldName": "role", "fieldType": "String", "isNullable": false},
+        {"fieldName": "college", "fieldType": "String", "isNullable": true},
+        {"fieldName": "major", "fieldType": "String", "isNullable": true},
+        {"fieldName": "grade", "fieldType": "String", "isNullable": true},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false}
+      ],
+      "indexes": [
+        {"indexName": "idx_username", "indexFields": [{"fieldName": "username", "sortType": "ASC"}]},
+        {"indexName": "idx_role", "indexFields": [{"fieldName": "role", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "ClubInfo",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "name", "fieldType": "String", "isNullable": false},
+        {"fieldName": "description", "fieldType": "String", "isNullable": true},
+        {"fieldName": "category", "fieldType": "String", "isNullable": false},
+        {"fieldName": "logo", "fieldType": "String", "isNullable": true},
+        {"fieldName": "coverImage", "fieldType": "String", "isNullable": true},
+        {"fieldName": "leaderId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "leaderName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "memberCount", "fieldType": "Integer", "isNullable": false},
+        {"fieldName": "maxMembers", "fieldType": "Integer", "isNullable": false},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "slogan", "fieldType": "String", "isNullable": true},
+        {"fieldName": "contactInfo", "fieldType": "String", "isNullable": true},
+        {"fieldName": "tags", "fieldType": "String", "isNullable": true}
+      ],
+      "indexes": [
+        {"indexName": "idx_status", "indexFields": [{"fieldName": "status", "sortType": "ASC"}]},
+        {"indexName": "idx_category", "indexFields": [{"fieldName": "category", "sortType": "ASC"}]},
+        {"indexName": "idx_leader", "indexFields": [{"fieldName": "leaderId", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "ActivityInfo",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "clubId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "clubName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "title", "fieldType": "String", "isNullable": false},
+        {"fieldName": "description", "fieldType": "String", "isNullable": true},
+        {"fieldName": "coverImage", "fieldType": "String", "isNullable": true},
+        {"fieldName": "location", "fieldType": "String", "isNullable": false},
+        {"fieldName": "startTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "endTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "maxParticipants", "fieldType": "Integer", "isNullable": false},
+        {"fieldName": "currentParticipants", "fieldType": "Integer", "isNullable": false},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false},
+        {"fieldName": "creatorId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "creatorName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "tags", "fieldType": "String", "isNullable": true},
+        {"fieldName": "summary", "fieldType": "String", "isNullable": true},
+        {"fieldName": "photos", "fieldType": "String", "isNullable": true}
+      ],
+      "indexes": [
+        {"indexName": "idx_club", "indexFields": [{"fieldName": "clubId", "sortType": "ASC"}]},
+        {"indexName": "idx_status", "indexFields": [{"fieldName": "status", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "ClubMember",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "clubId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "clubName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "studentId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "role", "fieldType": "String", "isNullable": false},
+        {"fieldName": "joinTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false}
+      ],
+      "indexes": [
+        {"indexName": "idx_club", "indexFields": [{"fieldName": "clubId", "sortType": "ASC"}]},
+        {"indexName": "idx_user", "indexFields": [{"fieldName": "userId", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "FinanceRecord",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "clubId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "clubName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "type", "fieldType": "String", "isNullable": false},
+        {"fieldName": "amount", "fieldType": "Double", "isNullable": false},
+        {"fieldName": "description", "fieldType": "String", "isNullable": false},
+        {"fieldName": "category", "fieldType": "String", "isNullable": true},
+        {"fieldName": "receipt", "fieldType": "String", "isNullable": true},
+        {"fieldName": "operatorId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "operatorName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false}
+      ],
+      "indexes": [
+        {"indexName": "idx_club", "indexFields": [{"fieldName": "clubId", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "ClubApplication",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "userId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "clubName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "description", "fieldType": "String", "isNullable": true},
+        {"fieldName": "category", "fieldType": "String", "isNullable": false},
+        {"fieldName": "reason", "fieldType": "String", "isNullable": true},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false},
+        {"fieldName": "reviewerId", "fieldType": "String", "isNullable": true},
+        {"fieldName": "reviewerName", "fieldType": "String", "isNullable": true},
+        {"fieldName": "reviewComment", "fieldType": "String", "isNullable": true},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "reviewTime", "fieldType": "Long", "isNullable": true}
+      ],
+      "indexes": [
+        {"indexName": "idx_status", "indexFields": [{"fieldName": "status", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "JoinApplication",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "clubId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "clubName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "studentId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "introduction", "fieldType": "String", "isNullable": true},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "reviewTime", "fieldType": "Long", "isNullable": true}
+      ],
+      "indexes": [
+        {"indexName": "idx_club", "indexFields": [{"fieldName": "clubId", "sortType": "ASC"}]},
+        {"indexName": "idx_status", "indexFields": [{"fieldName": "status", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "ActivityRegistration",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "activityId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "activityTitle", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "userName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "registerTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "status", "fieldType": "String", "isNullable": false}
+      ],
+      "indexes": [
+        {"indexName": "idx_activity", "indexFields": [{"fieldName": "activityId", "sortType": "ASC"}]},
+        {"indexName": "idx_user", "indexFields": [{"fieldName": "userId", "sortType": "ASC"}]}
+      ]
+    },
+    {
+      "objectTypeName": "NoticeInfo",
+      "fields": [
+        {"fieldName": "id", "fieldType": "String", "isPrimaryKey": true, "isNullable": false},
+        {"fieldName": "title", "fieldType": "String", "isNullable": false},
+        {"fieldName": "content", "fieldType": "String", "isNullable": false},
+        {"fieldName": "type", "fieldType": "String", "isNullable": false},
+        {"fieldName": "targetRole", "fieldType": "String", "isNullable": false},
+        {"fieldName": "senderId", "fieldType": "String", "isNullable": false},
+        {"fieldName": "senderName", "fieldType": "String", "isNullable": false},
+        {"fieldName": "createTime", "fieldType": "Long", "isNullable": false},
+        {"fieldName": "isRead", "fieldType": "Boolean", "isNullable": false}
+      ],
+      "indexes": [
+        {"indexName": "idx_type", "indexFields": [{"fieldName": "type", "sortType": "ASC"}]}
+      ]
+    }
+  ]
+}

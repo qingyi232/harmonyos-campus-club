@@ -1,0 +1,30 @@
+{
+  "src": [
+    "pages/auth/LoginPage",
+    "pages/auth/RegisterPage",
+    "pages/student/StudentHomePage",
+    "pages/student/ClubListPage",
+    "pages/student/ActivityListPage",
+    "pages/student/MyClubsPage",
+    "pages/student/ProfilePage",
+    "pages/student/RecruitmentPage",
+    "pages/student/ApplyClubPage",
+    "pages/student/ClubFinanceViewPage",
+    "pages/common/ClubDetailPage",
+    "pages/common/ActivityDetailPage",
+    "pages/leader/LeaderHomePage",
+    "pages/leader/ClubManagePage",
+    "pages/leader/ActivityManagePage",
+    "pages/leader/CreateActivityPage",
+    "pages/leader/MemberManagePage",
+    "pages/leader/FinancePage",
+    "pages/leader/EditClubPage",
+    "pages/leader/RecruitManagePage",
+    "pages/admin/AdminHomePage",
+    "pages/admin/ClubApprovalPage",
+    "pages/admin/ActivityApprovalPage",
+    "pages/admin/FinanceOverviewPage",
+    "pages/admin/StatisticsPage",
+    "pages/admin/UserManagePage"
+  ]
+}

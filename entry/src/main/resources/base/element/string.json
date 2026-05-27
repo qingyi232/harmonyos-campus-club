@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "校园社团管理系统"
+    },
+    {
+      "name": "ability_desc",
+      "value": "校园社团管理系统"
+    },
+    {
+      "name": "app_name",
+      "value": "社团管家"
+    }
+  ]
+}
